@@ -8,3 +8,8 @@ def my_view(request):
 @view_config(route_name='index', renderer='templates/newpage.pt')
 def hello_world(request):
     return {'content':'Hello!'}
+
+
+@view_config(route_name='calculator', renderer='templates/index.pt', request_method='POST')
+def calculator(request):
+    return {request: params}

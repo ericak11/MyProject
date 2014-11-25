@@ -9,5 +9,9 @@
         </td>
       </tr>
     </table>
+    <b>Pick 2 Numbers</b> <form method="POST" action="/calculator">
+      <input type="number" name="num_one">
+      <input type="number" name="num_two">
+    <input type="submit" value="submit" /> </form>
   </body>
 </html>
