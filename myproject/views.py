@@ -12,4 +12,5 @@ def hello_world(request):
 
 @view_config(route_name='calculator', renderer='templates/index.pt', request_method='POST')
 def calculator(request):
-    return {request: params}
+    sum = int(request.params.getall('num_one')[0]) + int(request.params.getall('num_two')[0])
+    return {'request': sum}
