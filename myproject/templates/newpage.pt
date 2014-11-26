@@ -12,6 +12,12 @@
     <b>Pick 2 Numbers</b> <form method="POST" action="/calculator">
       <input type="number" name="num_one">
       <input type="number" name="num_two">
+      <select name="math" id = "math">
+        <option value = "add">ADD</option>
+        <option value = "subtract">SUBTRACT</option>
+        <option value = "multiply">MULTIPLY</option>
+        <option value = "divide">DIVIDE</option>
+      </select>
     <input type="submit" value="submit" /> </form>
   </body>
 </html>

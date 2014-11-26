@@ -12,5 +12,16 @@ def hello_world(request):
 
 @view_config(route_name='calculator', renderer='templates/index.pt', request_method='POST')
 def calculator(request):
-    sum = int(request.params.getall('num_one')[0]) + int(request.params.getall('num_two')[0])
-    return {'request': sum}
+    first_num = int(request.params.getall('num_one')[0])
+    second_num = int(request.params.getall('num_two')[0])
+    operator = request.params.getall('math')[0]
+    if operator == "add":
+      sum = first_num + second_num
+    elif operator == "subtract":
+      sum = first_num - second_num
+    elif operator == "multiply":
+      sum = first_num * second_num
+    elif operator == "divide":
+      sum = float(first_num)/float(second_num)
+
+    return {'answer': sum, 'method': operator}
