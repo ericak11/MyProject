@@ -1,2 +1,7 @@
 <b>Answer</b>(${method}):
 ${answer}
+
+
+<br>
+
+<a href="${request.route_path('index')}">Back</a>.
