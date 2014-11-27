@@ -1,3 +1,4 @@
 MyProject README
 
-My First Pyramid app
+My First Pyramid app - A basic Calculator
+
