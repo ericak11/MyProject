@@ -17,11 +17,15 @@ def calculator(request):
     operator = request.params['math']
     if operator == "add":
       sum = first_num + second_num
+      operation = "addition"
     elif operator == "subtract":
       sum = first_num - second_num
+      operation = "subtraction"
     elif operator == "multiply":
       sum = first_num * second_num
+      operation = "multiplication"
     elif operator == "divide":
       sum = float(first_num)/float(second_num)
+      operation = "division"
 
-    return {'answer': sum, 'method': operator}
+    return {'answer': sum, 'method': operation}
